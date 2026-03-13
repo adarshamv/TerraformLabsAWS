@@ -1,5 +1,5 @@
 # variable "instance_type" {
-  
+
 # }
 
 # If Terraform searches for a variable that we did not provide,

@@ -1,16 +1,16 @@
 variable "vpn_ip" {
-  default = "101.20.30.50/32"
+  default     = "101.20.30.50/32"
   description = "this is IP address"
 }
 
 variable "app_port" {
-    default = "8080"
+  default = "8080"
 }
 
 variable "ssh_port" {
-    default = "22"
+  default = "22"
 }
 
 variable "ftp_port" {
-    default = "21"
+  default = "21"
 }
