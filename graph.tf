@@ -1,24 +1,24 @@
-resource "aws_eip" "lb" {
-  domain   = "vpc"
-}
+# resource "aws_eip" "lb" {
+#   domain   = "vpc"
+# }
 
-resource "aws_security_group" "example" {
-  name        = "attribute-sg"
-}
+# resource "aws_security_group" "example" {
+#   name        = "attribute-sg"
+# }
 
-resource "aws_vpc_security_group_ingress_rule" "example" {
-  security_group_id = aws_security_group.example.id
+# resource "aws_vpc_security_group_ingress_rule" "example" {
+#   security_group_id = aws_security_group.example.id
 
-  cidr_ipv4   = "${aws_eip.lb.public_ip}/32"
-  from_port   = 443
-  ip_protocol = "tcp"
-  to_port     = 443
-}
+#   cidr_ipv4   = "${aws_eip.lb.public_ip}/32"
+#   from_port   = 443
+#   ip_protocol = "tcp"
+#   to_port     = 443
+# }
 
-resource "aws_instance" "web" {
-  ami           = "ami-02dfbd4ff395f2a1b"
-  instance_type = "t3.micro"
-}
+# resource "aws_instance" "web" {
+#   ami           = "ami-02dfbd4ff395f2a1b"
+#   instance_type = "t3.micro"
+# }
 
 ##Terraform graph refers to a visual representation of the dependency relationships 
 #between resources defined in your Terraform configuration.
